@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 bin
 
+=======
+/target/
+.classpath
+.project
+.settings/
+>>>>>>> branch 'kostasbranch' of https://github.com/ntsompa/ProgHub.git
