@@ -1,5 +1,5 @@
 package phproject;
 
-public enum CompanyType {
+public enum CompanyType { //prwto commit
 
 }
