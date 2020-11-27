@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Company {
 
 	// static field
-	private static int count = 1; // metraei tis company to set the id
+	private static int count = 1; // count companies to set the id
 	// instance fields
-	private int id; // company id (monadiko)
+	private int id; // company id (primary)
 	private String name; // company name
 	private Region region; // company region
 	private ArrayList<String> departments;
@@ -16,8 +16,8 @@ public class Company {
 	// Constructor
 	public Company() {
 		setId(count);
-		departments = new ArrayList<String>(); // arxikopoihsh tou list departments 
-		employees = new ArrayList<Employee>(); // arxikopoihsh tou list employees
+		departments = new ArrayList<String>(); // initiate list departments 
+		employees = new ArrayList<Employee>(); // initiate list employees
 		count++;
 	}
 	

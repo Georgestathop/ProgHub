@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+import jdk.internal.net.http.hpack.NaiveHuffman;
+
 public class MainMenuScreen extends JFrame {
 	// instance fields
 	private final JButton signupButton; // button for sign up
@@ -43,9 +45,9 @@ public class MainMenuScreen extends JFrame {
 		loginButton.addActionListener(
 			new ActionListener() {
 							
-				public void actionPerformed(ActionEvent arg0) {
+				public void actionPerformed(ActionEvent event) {
 					setVisible(false);
-					//new LoginScreen(CentralMenuScreen.this)
+					new LoginScreen(MainMenuScreen.this);
 				}
 			}
 		);

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Account {
 	// static field
-	static ArrayList<Account> accounts = new ArrayList<Account>();
+	private static ArrayList<Account> accounts = new ArrayList<Account>();
 	// instance fields
 	private Company company; // company of the account
 	private String username; // account username
@@ -46,5 +46,9 @@ public class Account {
 	public String toString() {
 		return String.format("%s%nUsername : %s%nPassword : %s%n",
 				this.company, this.username, this.password);
+	}
+	
+	public static ArrayList<Account> getAccounts() {
+		return accounts;
 	}
 }

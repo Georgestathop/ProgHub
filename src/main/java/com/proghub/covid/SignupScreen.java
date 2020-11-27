@@ -63,8 +63,8 @@ public class SignupScreen extends JFrame {
 			new ActionListener() {
 					
 				public void actionPerformed(ActionEvent e) {
-						usernameInput = e.getActionCommand();
-						usernameBox.setSelected(true);
+						usernameInput = e.getActionCommand(); // save keyboard input
+						usernameBox.setSelected(true); // check the box
 				}
 			}
 		);
@@ -82,9 +82,9 @@ public class SignupScreen extends JFrame {
 		
 			new ActionListener() {
 				
-				public void actionPerformed(ActionEvent e) {
-					passwordInput = e.getActionCommand(); // saves the password input
-					passwordBox.setSelected(true); // checks the password box
+				public void actionPerformed(ActionEvent event) {
+					passwordInput = event.getActionCommand(); // save keyboard input
+					passwordBox.setSelected(true); // check the box
 				}
 			}
 		);
@@ -102,9 +102,9 @@ public class SignupScreen extends JFrame {
 		
 			new ActionListener() {
 				
-				public void actionPerformed(ActionEvent e) {
-					companyNameInput = e.getActionCommand();
-					companyNameBox.setSelected(true);
+				public void actionPerformed(ActionEvent event) {
+					companyNameInput = event.getActionCommand(); // save keyboard input
+					companyNameBox.setSelected(true); // check the box
 				}
 			}
 		);
@@ -128,10 +128,10 @@ public class SignupScreen extends JFrame {
 		
 			new ItemListener() {
 				
-				public void itemStateChanged(ItemEvent e) {
-					if (e.getStateChange() == ItemEvent.SELECTED) {
-						companyRegionInput = (Region)regionComboBox.getSelectedItem();
-						regionCheckBox.setSelected(true);		
+				public void itemStateChanged(ItemEvent event) {
+					if (event.getStateChange() == ItemEvent.SELECTED) {
+						companyRegionInput = (Region)regionComboBox.getSelectedItem(); // save the selection
+						regionCheckBox.setSelected(true); // check the box		
 					}	
 				}
 			}
@@ -148,12 +148,12 @@ public class SignupScreen extends JFrame {
 			new ActionListener() {
 					
 				public void actionPerformed(ActionEvent event) {
-						Company newComp = new Company();
-						newComp.setName(companyNameInput);
-						newComp.setRegion(companyRegionInput);
-						Account newAccount = new Account(newComp, usernameInput, passwordInput);
-						JOptionPane.showMessageDialog(SignupScreen.this, "Sign Up Done!");
-						System.out.println(Account.accounts);
+						Company newComp = new Company(); // initiate new company instance
+						newComp.setName(companyNameInput); // set the company name
+						newComp.setRegion(companyRegionInput); // set the company region
+						new Account(newComp, usernameInput, passwordInput); // set the corresponding account instance
+						JOptionPane.showMessageDialog(SignupScreen.this, "Sign Up Done!"); // user dialog
+						System.out.println(Account.getAccounts()); 
 				}
 			}
 		);

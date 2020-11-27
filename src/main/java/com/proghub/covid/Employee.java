@@ -5,9 +5,9 @@ import java.util.Stack;
 public class Employee {
 
 	// static field
-	private static int count; // metraei employees to set employee id
+	private static int count; // count employees to set employee id
 	// instance fields
-	private int id; // employee id (monadiko)
+	private int id; // employee id (primary)
 	private String name; // employee name
 	private String department; // employee department
 	private Stack<Test> tests; // employee test list
