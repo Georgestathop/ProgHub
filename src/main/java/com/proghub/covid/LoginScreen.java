@@ -38,7 +38,7 @@ public class LoginScreen extends JFrame {
 		// frame settings
 		super("Log In");
 		setLayout(new GridLayout(3,1)); // orizei to layout manager 3 x 3
-		setSize(400, 400); // width : 400, height : 400
+		setSize(400, 150); // width : 400, height : 400
 		
 		this.parent = parent;
 		

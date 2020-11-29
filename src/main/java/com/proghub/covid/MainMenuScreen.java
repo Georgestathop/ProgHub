@@ -21,7 +21,7 @@ public class MainMenuScreen extends JFrame {
 		// main menu screen frame setup
 		super("Main Menu");
 		setLayout(new GridLayout(3,1)); // layout manager 3 x 1
-		setSize(400, 400); // width : 400, height : 400
+		setSize(270, 200); // width : 400, height : 400
 		
 		// sign up button set up
 		signupButton = new JButton("Sign Up"); // set the text for the button

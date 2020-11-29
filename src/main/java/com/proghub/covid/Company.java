@@ -11,7 +11,7 @@ public class Company {
 	private String name; // company name
 	private Region region; // company region
 	private ArrayList<String> departments;
-	private ArrayList<Employee> employees;
+	protected ArrayList<Employee> employees;
 	
 	// Constructor
 	public Company() {

@@ -49,7 +49,7 @@ public class SignupScreen extends JFrame {
 		// sign up screen set up
 		super("Sign Up"); // set the frame's title
 		setLayout(new GridLayout(5, 5)); // set the layout
-		setSize(400, 400); // set the dimension width X height
+		setSize(400, 200); // set the dimension width X height
 		
 		this.parent = parent; // set the parent frame
 		
